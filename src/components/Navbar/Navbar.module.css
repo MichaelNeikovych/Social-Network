@@ -1,0 +1,30 @@
+.nav {
+    grid-area: n;
+    background-color: #949494;
+    padding: 10px;
+}
+
+.item a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.item a:hover {
+    color: #d4d4d4;
+}
+
+.item .activeLink {
+    color: gold;
+}
+.nav .settings {
+    margin-top: 10px;
+}
+.nav .friends {
+    margin-top: 40px;
+    font-size: 25px;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+}

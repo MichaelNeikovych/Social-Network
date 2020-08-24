@@ -1,0 +1,15 @@
+.item {
+    color: #000;
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+.item img {
+    margin-top: 10px;
+    width: 100px;
+    margin-right: 20px;
+    height: 100%;
+}
+.postItem {
+    width: 200px;
+}

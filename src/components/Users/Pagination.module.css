@@ -1,0 +1,16 @@
+.pagination .selected {
+    font-weight: bold;
+}
+.pagination {
+    width: 500px;
+    overflow: auto;
+    margin: 10px;
+}
+.pagination span {
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.pagination span:hover {
+    color: #595959;
+}

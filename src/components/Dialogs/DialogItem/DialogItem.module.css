@@ -1,0 +1,12 @@
+.dialogItem {
+    display: flex;
+    align-items: center;
+}
+.dialogItem img {
+    width: 80px;
+    margin: 10px;
+}
+
+.dialogItem a:hover {
+    background-color: #c0c0c0;
+}
