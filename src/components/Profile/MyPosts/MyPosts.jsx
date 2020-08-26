@@ -16,7 +16,7 @@ const MyPostsForm = (props) => {
 const MyPostsReduxForm = reduxForm({form: 'myPostsForm'})(MyPostsForm);
 
 const MyPosts = React.memo(props => {
-	const posts = [...props.posts].reverse().map(p => <Post id={p.id} message={p.message} like={p.like} {...props}/>);
+	const posts = [...props.posts].reverse().map(p => <Post {...props} id={p.id} message={p.message} like={p.like}/>);
 
 	const onAddPostClick = (value) => {
 		if (!value.newPostMessage) return;

@@ -5,9 +5,7 @@ import ProfileStatus from "./ProfileStatus";
 import defaultPhoto from '../../../assets/img/unknown-user.png'
 
 const ProfileInfo = (props) => {
-  if (!props.profile) {
-    return <Preloader/>
-  }
+  if (!props.profile) return <Preloader/>
 
   return (
     <div className={style.item}>
