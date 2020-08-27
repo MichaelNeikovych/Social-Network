@@ -7,11 +7,17 @@ import defaultPhoto from '../../../assets/img/unknown-user.png'
 const ProfileInfo = (props) => {
   if (!props.profile) return <Preloader/>
 
+  const onPhotoLoad = (e) => {
+    props.savePhoto(e.target.files[0])
+  }
+
   return (
     <div className={style.item}>
       <img src="http://bsnscb.com/data/out/51/38950310-dark-forest-wallpapers.jpeg"/>
       <div className={style.info}>
-        <img src={props.profile.photos.large ? props.profile.photos.large : defaultPhoto}/>
+
+        <img src={props.profile.photos.large || defaultPhoto}/>
+        {props.isOwner && <input type="file" onChange={onPhotoLoad}/>}
 
         <div className={style.item}>
           <p>{props.profile.aboutMe}</p>
