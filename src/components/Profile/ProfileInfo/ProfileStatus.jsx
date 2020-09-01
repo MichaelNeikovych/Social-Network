@@ -22,14 +22,13 @@ const ProfileStatus = (props) => {
   return (
     <div>
       {
-        editMode && <input value={status} onBlur={deactivateMode} onChange={onStatusChange} autoFocus={true}/>
+        editMode && <div><b>Status: </b> <input value={status} onBlur={deactivateMode} onChange={onStatusChange} autoFocus={true}/></div>
       }
       {
-        !editMode && <span onDoubleClick={activateMode}>{props.status || 'What is your mood today?'}</span>
+        !editMode && <div><b>Status: </b> <span onDoubleClick={activateMode}>{props.status || 'What is your mood today?'}</span></div>
       }
     </div>
   )
-
 }
 
 export default ProfileStatus;

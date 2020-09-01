@@ -1,22 +1,10 @@
 import React from 'react';
 import style from '../MyPosts/MyPosts.module.css';
 import Post from "./Post/Posts";
-import {reduxForm} from "redux-form";
-import {createField} from "../../common/FormsControls/FormsControls";
-
-const MyPostsForm = (props) => {
-	return <form onSubmit={props.handleSubmit}>
-		{createField('textarea', 'Write new post', 'newPostMessage')}
-		<div>
-			<button>Add post</button>
-		</div>
-	</form>
-}
-
-const MyPostsReduxForm = reduxForm({form: 'myPostsForm'})(MyPostsForm);
+import MyPostsReduxForm from './MyPostsForm';
 
 const MyPosts = React.memo(props => {
-	const posts = [...props.posts].reverse().map(p => <Post {...props} id={p.id} message={p.message} like={p.like}/>);
+	const posts = [...props.posts].reverse().map(p => <Post key={p.id} {...props} id={p.id} message={p.message} like={p.like}/>);
 
 	const onAddPostClick = (value) => {
 		if (!value.newPostMessage) return;
